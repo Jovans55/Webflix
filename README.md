@@ -1,5 +1,7 @@
 # React + Vite
 
+## THIS REPO AND CODE IS UNDER THE SOLE OWNERSHIP OF JOVAN STOSIC AND NOT FOR USE BY ANY OTHER ENTITY THIS IS ONLY FOR VIEWING NOT FOR ANY OTHER REASON
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
