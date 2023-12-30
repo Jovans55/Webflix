@@ -16,7 +16,7 @@ function App() {
             <label style={{marginRight: "80px"}}>Remember me</label>
             <a>Need help?</a>
           </div>
-          <p>New to Webflix?</p>
+          <p style={{fontWeight: "bold"}}>New to Webflix?</p>
           <a>Sign Up!</a>
         </div>
       </section>
