@@ -4,7 +4,9 @@ function App() {
 
   return (
     <div>
-      <img src='./public/webflix.png' alt='Webflix logo ligt blue' width={"15%"} height={"15%"}/>
+      <header>
+        <img src='./public/webflix.png' alt='Webflix logo ligt blue' width={"200px"} height={"100%"}/>
+      </header>
     </div>
   )
 }

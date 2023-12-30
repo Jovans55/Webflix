@@ -5,7 +5,7 @@
   height: 100vh;
   color: rgba(255, 255, 255, 0.87);
   /* background-color: #242424; */
-  background-image: url("https://static.vecteezy.com/system/resources/previews/011/351/208/non_2x/elegant-golden-stage-circle-glowing-with-lighting-effect-sparkle-on-black-background-template-premium-award-design-free-vector.jpg");
+  background-image: url("../public/background.jpg");
   background-size: cover;
   background-position: center; /* Center the background image */
   background-repeat: no-repeat;
@@ -16,6 +16,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body{
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 650px) {
+  :root {
+    background-image: none;
+    background-color: black;
+  }
+}
 
 @media (prefers-color-scheme: light) {
 
