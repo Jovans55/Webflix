@@ -29,22 +29,29 @@ body {
 #root > .appContainer #signInContainer {
   flex-grow: 1;
   align-self: center;
-}
-
-#signInContainer{
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 10%;
 }
 
-#signIn{
+#signInContainer #signIn{
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.721);
+  padding: 40px;
 }
 
 #root > .appContainer footer {
   border: 5px solid black;
+  padding: 70px;
+  background-color: rgba(0, 0, 0, 0.721);
+}
+
+.inputField{
+  padding: 13px;
+  width: 270px;
+  border-radius: 5px;
+  margin-top: 7px;
 }
 
 @media screen and (max-width: 650px) {
