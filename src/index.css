@@ -38,14 +38,32 @@ body {
 #signInContainer #signIn{
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.721);
-  padding: 40px;
+  padding: 45px;
+  padding-bottom: 65px;
 }
 
 #root > .appContainer footer {
-  padding: 100px;
+  padding: 40px 50px 90px 50px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.721);
+}
+
+.appContainer footer div {
+  max-width: 1000px;
+  flex-grow: 1;
+}
+
+.appContainer footer div section {
+  display: flex;
+  flex-direction: column;
+}
+
+.appContainer footer div section div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
 }
 
 .inputField{
@@ -58,6 +76,16 @@ body {
 }
 
 @media screen and (max-width: 650px) {
+
+  .appContainer footer div section div {
+    display: inline;
+    margin: 8px;
+  }
+
+  .appContainer footer div section div a{
+    display: block;
+    margin: 3px 0px;
+  }
 
 }
 
