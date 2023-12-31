@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import apiRoutes from "./routes/apiRoutes.js";
 import dotenv from "dotenv";
 import path from "path";
+import cors from "cors";
 
 dotenv.config({ path: path.join("./.env") });
 
@@ -16,46 +17,9 @@ const uri = `mongodb+srv://jovanstosic012:${DATABASEP}@cluster0.ymcvseh.mongodb.
 mongoose.connect(uri);
 
 app.use(express.json());
+app.use(cors());
 app.use("/api", apiRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-const getData = async (id) => {
-  try {
-    const response = await fetch(`http://localhost:3001/api/users${id}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error("Error posting data:", error);
-  }
-};
-
-const postData = async (firstName, lastName, email, password) => {
-  try {
-    const response = await fetch("http://localhost:3001/api/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        firstName,
-        lastName,
-        email,
-        password,
-      }),
-    });
-  } catch (error) {
-    console.error("Error posting data:", error);
-  }
-};
-
-postData("Steven", "LongBottom", "stevenlong456@gmail.com", "Ilovebaseball44");
-// getData();

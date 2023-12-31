@@ -1,5 +1,27 @@
+import { useEffect, useState } from "react";
+import { getData } from "../api/api"
+
 
 function App() {
+
+  const [examples, setExamples] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getData("test@email.com", "test");
+        console.log(data);
+        setExamples(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  console.log("IMMA CREEEEP", examples)
+
   return (
     <div className="appContainer">
       <header>

@@ -2,18 +2,19 @@ import express from "express";
 const router = express.Router();
 import UserModel from "../models/userModel.js";
 
-router.get("/users:id", async (req, res) => {
+router.get("/users", async (req, res) => {
   try {
-    const id = req.params.id;
+    const { email, password } = req.query;
 
-    const user = await UserModel.findOne({ _id: id });
+    const user = await UserModel.findOne({ email: email });
 
-    const isPasswordMatch = await user.comparePassword("testPassw11ord");
+    const isPasswordMatch = await user.comparePassword(password);
 
     if (!user) {
       res.status(404).json({ error: "Example not found" });
       return;
     }
+
     if (isPasswordMatch) {
       res.json(user);
     } else {
@@ -38,9 +39,7 @@ router.post("/users", async (req, res) => {
 
     await newUser.save();
 
-    const user = await UserModel.find();
-
-    res.json(user);
+    res.status(200);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Internal Server Error" });

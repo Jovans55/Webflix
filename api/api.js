@@ -1,14 +1,17 @@
-const getData = async (id) => {
+const getData = async (email, password) => {
   try {
-    const response = await fetch(`http://localhost:3001/api/users${id}`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      `http://localhost:3001/api/users?email=${email}&password=${password}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const data = await response.json();
-    console.log(data);
+    return data;
   } catch (error) {
     console.error("Error posting data:", error);
   }
@@ -16,7 +19,7 @@ const getData = async (id) => {
 
 const postData = async (firstName, lastName, email, password) => {
   try {
-    const response = await fetch("http://localhost:3001/api/users", {
+    await fetch("http://localhost:3001/api/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -32,3 +35,5 @@ const postData = async (firstName, lastName, email, password) => {
     console.error("Error posting data:", error);
   }
 };
+
+export { getData, postData };
