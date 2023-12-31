@@ -24,10 +24,10 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-const postData = async () => {
+const getData = async (id) => {
   try {
-    const response = await fetch("http://localhost:3001/api/examples", {
-      method: "POST",
+    const response = await fetch(`http://localhost:3001/api/users${id}`, {
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
@@ -40,5 +40,25 @@ const postData = async () => {
   }
 };
 
+const postData = async (firstName, lastName, email, password) => {
+  try {
+    const response = await fetch("http://localhost:3001/api/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        email,
+        password,
+      }),
+    });
+  } catch (error) {
+    console.error("Error posting data:", error);
+  }
+};
+
 // Call the postData function to make a POST request
-postData();
+postData("Steven", "LongBottom", "stevenlong456@gmail.com", "Ilovebaseball44");
+// getData();

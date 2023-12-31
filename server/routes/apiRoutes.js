@@ -8,13 +8,17 @@ router.get("/users:id", async (req, res) => {
 
     const user = await UserModel.findOne({ _id: id });
 
+    const isPasswordMatch = await user.comparePassword("testPassw11ord");
+
     if (!user) {
-      // If no example is found, return a 404 status
       res.status(404).json({ error: "Example not found" });
       return;
     }
-
-    res.json(user);
+    if (isPasswordMatch) {
+      res.json(user);
+    } else {
+      res.send({ error: "Wrong Password" });
+    }
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
@@ -23,20 +27,20 @@ router.get("/users:id", async (req, res) => {
 
 router.post("/users", async (req, res) => {
   try {
-    // Create a new example using the provided data
-    const newExample = new UserModel({
-      name: "John",
-      description: "He likes apples",
+    const { firstName, lastName, email, password } = req.body;
+
+    const newUser = new UserModel({
+      firstName,
+      lastName,
+      email,
+      password,
     });
 
-    // Save the new example to the database
-    const savedExample = await newExample.save();
+    await newUser.save();
 
-    // Retrieve all examples after adding the new one
-    const examples = await UserModel.find();
+    const user = await UserModel.find();
 
-    // Respond with the updated list of examples
-    res.json(examples);
+    res.json(user);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
