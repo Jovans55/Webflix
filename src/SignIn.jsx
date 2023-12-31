@@ -7,7 +7,6 @@ function SignIn() {
 
   const handleSignUpClick = () => {
     setNewUser(!newUser);
-    console.log(newUser);
   };
 
   return (

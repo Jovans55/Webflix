@@ -4,6 +4,7 @@ import { getData } from "../api/api";
 function SignInContainer({ onSignUpClick }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [remember, setRemember] = useState(false);
   const [error, setError] = useState(null);
 
   const handleSubmit = async () => {
@@ -13,11 +14,17 @@ function SignInContainer({ onSignUpClick }) {
         setError("Wrong email or password.");
       } else {
         setError(null)
+        document.cookie = `userEmail=${email}; path=/`;
+        console.log("cookie", document);
       }
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
+
+  const handleCookieCreation = () => {
+    setRemember(!remember)
+  }
 
   return (
     <section id='signInContainer'>
@@ -55,7 +62,7 @@ function SignInContainer({ onSignUpClick }) {
           Sign In
         </button>
         <div style={{ marginBottom: "50px" }}>
-          <input type="checkbox" name="Remember me" value="Remember" />
+          <input type="checkbox" name="Remember me" value="Remember" onClick={handleCookieCreation} />
           <label style={{ marginRight: "80px" }}>Remember me</label>
           <a>Need help?</a>
         </div>
