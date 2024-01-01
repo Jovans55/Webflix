@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { postData } from "../api/api";
 
 function SignUpContainer({ onSignUpClick }) {
@@ -11,7 +11,6 @@ function SignUpContainer({ onSignUpClick }) {
   const [success, setSuccess] = useState(false);
 
   const isValidEmail = (value) => {
-    // Simple email validation using a regular expression
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(value);
   };
