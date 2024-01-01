@@ -15,12 +15,23 @@ function Home() {
                     </Link>
                 </button>
             </header>
-            <section id='plans'>
-                <h1>PLANS</h1>
-                <p>$100/month scroll effectt</p>
-                <button>Sign Up</button>
+            <section id='signUpHome'>
+                <div>
+                    <h1>Unlimted moives, shows, and more</h1>
+                    <p style={{fontSize: "25px"}}>Watch anywhere. Cancel Never.</p>
+                    <p style={{fontSize: "19px"}}>Ready to join? Click below!</p>
+                    <button style={{
+                        color: "white",
+                        backgroundColor: "#399afb",
+                        width: "300px",
+                        padding: "10px 15px",
+                        border: "none",
+                        borderRadius: "5px",
+                        fontSize: "19px",
+                    }}>Sign Up</button>
+                </div>
             </section>
-            <h1>POPULAR 10 year $12,000 Plan</h1>
+            <h1 id="ad"> 🔥SALE! Sign up for 10 years today get $5,000 off!🔥</h1>
             <section>
                 <img />
                 <h1>Watch on your fridge</h1>

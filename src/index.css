@@ -30,8 +30,34 @@ body {
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  margin: 30px 15px 10px;
+  margin: 30px 15px 15px;
   font-size: 17px;
+}
+
+#signUpHome{
+  width: 100vw;
+  height: 50vh;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#signUpHome div{
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#homeContainer #ad{
+  text-align: center;
+  font-size: 22px;
+  padding: 15px;
+  background: linear-gradient(to right, #101012, #6b64e6 10%, #e66465 70%, #6b64e6 90%, #101012);
 }
 
 /* SIGN IN CSS*/
