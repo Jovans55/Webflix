@@ -30,6 +30,13 @@ router.post("/users", async (req, res) => {
   try {
     const { firstName, lastName, email, password } = req.body;
 
+    const user = await UserModel.findOne({ email: email });
+
+    if (user) {
+      res.send({ error: "Email In Use" });
+      return;
+    }
+
     const newUser = new UserModel({
       firstName,
       lastName,
@@ -39,7 +46,7 @@ router.post("/users", async (req, res) => {
 
     await newUser.save();
 
-    res.status(200);
+    res.send({ success: true });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
