@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #101012;
+  background-color: black;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -36,7 +36,7 @@ body {
 
 #signUpHome{
   width: 100vw;
-  height: 50vh;
+  height: 65vh;
   background-image: url("/background.jpg");
   background-size: cover;
   background-position: center;
@@ -58,6 +58,19 @@ body {
   font-size: 22px;
   padding: 15px;
   background: linear-gradient(to right, #101012, #6b64e6 10%, #e66465 70%, #6b64e6 90%, #101012);
+}
+
+.watchDevices{
+  display: flex;
+  justify-content: center;
+  border-top: 5px solid #101012;
+  padding-top: 55px;
+}
+
+.watchDevices div{
+  max-width: 400px;
+  margin: 0px 55px;
+  font-size: 20px;
 }
 
 /* SIGN IN CSS*/
@@ -131,6 +144,11 @@ body {
   .appContainer footer div section div a{
     display: block;
     margin: 3px 0px;
+  }
+
+  .watchDevices{
+    flex-direction: column;
+    align-items: center;
   }
 
 }

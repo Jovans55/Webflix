@@ -31,14 +31,20 @@ function Home() {
                     }}>Sign Up</button>
                 </div>
             </section>
-            <h1 id="ad"> 🔥SALE! Sign up for 10 years today get $5,000 off!🔥</h1>
-            <section>
-                <img />
-                <h1>Watch on your fridge</h1>
+            <h1 id="ad" style={{marginTop: "0px"}}> 🔥SALE! Sign up for 10 years today get $5,000 off!🔥</h1>
+            <section className='watchDevices'>
+                <div>
+                    <h1>Watch on your fridge</h1>
+                    <p>With our industry leading smart fridge app you can watch your favorite content while you peruse your fridge</p>
+                </div>
+                <img src='/smartFridge-backgroundremove.png' alt='Gray smart fridge with screen' width={"20%"} />
             </section>
-            <section>
-                <img />
-                <h1>Or click back on watch on your toaster</h1>
+            <section className='watchDevices'>
+                <img src='/toaster-removedback.png' alt='Gray smart toaster with screen and toast in it' width={"20%"} />
+                <div>
+                    <h1>Or Watch On Your Toaster</h1>
+                    <p>A greaterly anticipated feature, you can now watch Webflix on your toaster! Sit back relax enjoy your waffles and let the movie magic take you away!</p>
+                </div>
             </section>
             <div>
                 <h1>Q+A DROP DOWN</h1>
