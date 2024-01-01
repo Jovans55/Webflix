@@ -5,7 +5,15 @@ function Home() {
         <div id='homeContainer'>
             <header>
                 <img src='/webflix.png' alt='Webflix logo light blue' width={"200px"} height={"100%"} style={{margin: "10px 0px 0px 15px"}}/>
-                <Link to="/signin">Sign In</Link>
+                <button>
+                    <Link to="/signin" 
+                        style={{
+                            textDecoration: "none", 
+                            color: "white"
+                        }}>
+                        Sign In
+                    </Link>
+                </button>
             </header>
             <section id='plans'>
                 <h1>PLANS</h1>

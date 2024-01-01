@@ -17,6 +17,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* HOME CSS */
+
+#homeContainer header{
+  display: flex;
+  justify-content: space-between;
+}
+
+#homeContainer header button{
+  background-color: #399afb;
+  width: 100px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 30px 15px 10px;
+  font-size: 17px;
+}
+
+/* SIGN IN CSS*/
+
 #root > .appContainer {
   flex-grow: 1;
   display: flex;
