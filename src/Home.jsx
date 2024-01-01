@@ -39,7 +39,7 @@ function Home() {
                 </div>
                 <img src='/smartFridge-backgroundremove.png' alt='Gray smart fridge with screen' width={"20%"} />
             </section>
-            <section className='watchDevices'>
+            <section className='watchDevices' style={{borderBottom: "10px solid #101012", padding: "55px"}}>
                 <img src='/toaster-removedback.png' alt='Gray smart toaster with screen and toast in it' width={"20%"} />
                 <div>
                     <h1>Or Watch On Your Toaster</h1>

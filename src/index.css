@@ -35,7 +35,6 @@ body {
 }
 
 #signUpHome{
-  width: 100vw;
   height: 65vh;
   background-image: url("/background.jpg");
   background-size: cover;
@@ -63,7 +62,7 @@ body {
 .watchDevices{
   display: flex;
   justify-content: center;
-  border-top: 5px solid #101012;
+  border-top: 10px solid #101012;
   padding-top: 55px;
 }
 
