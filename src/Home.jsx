@@ -48,6 +48,19 @@ function Home() {
                 </div>
             </section>
             <FaqPage />
+            <div style={{display: "flex", flexDirection: "column", 
+            justifyContent: "center", alignItems: "center", margin: "20px 0px"}}>
+                <p style={{fontSize: "19px", fontWeight: "bold"}}>Ready to join? Click below!</p>
+                <button style={{
+                color: "white",
+                backgroundColor: "#399afb",
+                width: "350px",
+                padding: "10px 15px",
+                border: "none",
+                borderRadius: "5px",
+                fontSize: "19px",
+                }}>Sign Up</button>
+            </div>
             <footer>
                 <div>
                     <p>Questions? Call 1-123-456-789</p>

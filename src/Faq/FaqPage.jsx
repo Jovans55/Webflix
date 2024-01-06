@@ -25,7 +25,7 @@ const FaqPage = () => {
           answer="Can you watch disney plus or netflix on your toaster? No right? We're cornering a lucrative market here, think a little gosh."
         />
         <FaqItem
-          question="When can we stream on washing machine"
+          question="When can we stream on washing machines?"
           answer="The webflix engineers or how we like to call them Webflixaneers, are hard at work bringing this feature to life! Just sit thight soon you can do laundry and watch your favorite shows!"
         />
       </div>
