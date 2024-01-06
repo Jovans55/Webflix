@@ -28,6 +28,7 @@ const FaqItem = ({ question, answer }) => {
               width: "100%",
               padding: "15px 5px",
               wordWrap: "break-word",
+              fontWeight: "bold"
             }}>
               {answer}
             </div>
