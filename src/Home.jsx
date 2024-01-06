@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import FaqPage from './Faq/FaqPage';
 
 function Home() {
     return (
@@ -46,9 +47,7 @@ function Home() {
                     <p>A greaterly anticipated feature, you can now watch Webflix on your toaster! Sit back relax enjoy your waffles and let the movie magic take you away!</p>
                 </div>
             </section>
-            <div>
-                <h1>Q+A DROP DOWN</h1>
-            </div>
+            <FaqPage />
             <footer>
                 <div>
                     <p>Questions? Call 1-123-456-789</p>
