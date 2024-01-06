@@ -8,11 +8,39 @@ const FaqItem = ({ question, answer }) => {
   };
 
   return (
-    <div>
-      <div style={{ cursor: 'pointer' }} onClick={toggleOpen}>
-        <strong>{question}</strong>
+    <div style={{ 
+      display: "flex", justifyContent: "center", 
+      alignItems: "center", flexDirection: "column",
+      margin: "10px 0px"
+    }}>
+      <div style={{ cursor: 'pointer', display: "flex", justifyContent: "center", 
+        alignItems: "center", flexDirection: "column", width: "50%"}} onClick={toggleOpen}>
+        {isOpen ? (
+          <>
+            <strong style={{
+              fontSize: "20px",
+              backgroundColor: "#212121",
+              padding: "15px 5px",
+              width: "100%",
+            }}>{question}</strong>
+            <div style={{ 
+              backgroundColor: "#3D3D3D",
+              width: "100%",
+              padding: "15px 5px",
+              wordWrap: "break-word",
+            }}>
+              {answer}
+            </div>
+          </>
+        ) : (
+          <strong style={{
+            fontSize: "20px",
+            backgroundColor: "#212121",
+            padding: "15px 5px",
+            width: "100%",
+          }}>{question}</strong>
+        )}
       </div>
-      {isOpen && <div>{answer}</div>}
     </div>
   );
 };
