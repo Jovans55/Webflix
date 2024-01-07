@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import { postData } from "../../api/api";
 
-function SignUpContainer({ onSignUpClick }) {
+function SignUpContainer({ plan }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -20,6 +21,11 @@ function SignUpContainer({ onSignUpClick }) {
 
     if (!isValidEmail(email)) {
       setError("Please enter a valid email address");
+      return;
+    }
+
+    if (plan == "none") {
+      setError("Please choose a plan");
       return;
     }
 
@@ -49,7 +55,6 @@ function SignUpContainer({ onSignUpClick }) {
           <h1>Sign Up Successful!</h1>
           <p>Please return to Sign In.</p>
           <button
-          onClick={onSignUpClick}
           style={{
             color: "white",
             backgroundColor: "#399afb",
@@ -127,7 +132,9 @@ function SignUpContainer({ onSignUpClick }) {
           <a>Need help?</a>
         </div>
         <p style={{ fontWeight: "bold" }}>Already Have An Account?</p>
-        <button onClick={onSignUpClick}>Back To Sign In</button>
+        <Link to="/signin" style={{textDecoration: "none", color: "white", fontWeight: "bold"}}>
+          Back to sign in
+        </Link>
       </div>
     </section>
   );
