@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SignUpContainer from './SignUpContainer';
 
 function SignUp() {
 
@@ -11,6 +12,7 @@ function SignUp() {
             style={{margin: "10px 0px 0px 15px"}}/>
         </Link>
         <h1>Hi</h1>
+        <SignUpContainer />
     </div>
   );
 }
