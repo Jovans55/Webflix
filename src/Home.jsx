@@ -5,10 +5,10 @@ function Home() {
     return (
         <div id='homeContainer'>
             <header>
-                <Link>
+                <Link to="/" >
                     <img src='/webflix.png' 
                     alt='Webflix logo light blue' 
-                    width={"200px"} 
+                    width={"200px"}
                     style={{margin: "10px 0px 0px 15px"}}/>
                 </Link>
                 <button>
@@ -26,15 +26,17 @@ function Home() {
                     <h1>Unlimted moives, shows, and more</h1>
                     <p style={{fontSize: "25px"}}>Watch anywhere. Cancel Never.</p>
                     <p style={{fontSize: "19px"}}>Ready to join? Click below!</p>
-                    <button style={{
-                        color: "white",
-                        backgroundColor: "#399afb",
-                        width: "300px",
-                        padding: "10px 15px",
-                        border: "none",
-                        borderRadius: "5px",
-                        fontSize: "19px",
-                    }}>Sign Up</button>
+                    <Link to="/signup" >
+                        <button style={{
+                            color: "white",
+                            backgroundColor: "#399afb",
+                            width: "300px",
+                            padding: "10px 15px",
+                            border: "none",
+                            borderRadius: "5px",
+                            fontSize: "19px",
+                        }}>Sign Up</button>
+                    </Link>
                 </div>
             </section>
             <h1 id="ad" style={{marginTop: "0px"}}> 🔥SALE! Sign up for 10 years today get $5,000 off!🔥</h1>
@@ -56,15 +58,17 @@ function Home() {
             <div style={{display: "flex", flexDirection: "column", 
             justifyContent: "center", alignItems: "center", margin: "20px 0px"}}>
                 <p style={{fontSize: "19px", fontWeight: "bold"}}>Ready to join? Click below!</p>
-                <button style={{
-                color: "white",
-                backgroundColor: "#399afb",
-                width: "350px",
-                padding: "10px 15px",
-                border: "none",
-                borderRadius: "5px",
-                fontSize: "19px",
-                }}>Sign Up</button>
+                <Link to="/signup" >
+                    <button style={{
+                        color: "white",
+                        backgroundColor: "#399afb",
+                        width: "300px",
+                        padding: "10px 15px",
+                        border: "none",
+                        borderRadius: "5px",
+                        fontSize: "19px",
+                    }}>Sign Up</button>
+                </Link>
             </div>
             <footer id="mainFooter">
                 <div>

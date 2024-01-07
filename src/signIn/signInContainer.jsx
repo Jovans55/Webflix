@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import { getData } from "../../api/api";
 
 function SignInContainer({ onSignUpClick }) {
@@ -67,7 +68,9 @@ function SignInContainer({ onSignUpClick }) {
           <a>Need help?</a>
         </div>
         <p style={{ fontWeight: "bold" }}>New to Webflix?</p>
-        <button onClick={onSignUpClick}>Sign Up!</button>
+        <Link to="/signup" style={{textDecoration: "none", color: "white"}}>
+          Sign Up!
+        </Link>
       </div>
     </section>
   );
