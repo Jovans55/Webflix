@@ -10,7 +10,12 @@ function PlanCard({ type, color, price, howLong, benefits }) {
   }, [duration, price, timeFrame]);
 
   const handleDurationChange = (e) => {
-    setDuration(e.target.value);
+    if(e.target.value > 11 && timeFrame == "monthly"){
+        setTimeFrame("yearly")
+        setDuration(1)
+    } else {
+        setDuration(e.target.value)
+    }
   };
 
   const handleTimeFrameChange = (e) => {
@@ -55,9 +60,24 @@ function PlanCard({ type, color, price, howLong, benefits }) {
             <option value="yearly">Yearly</option>
         </select>
       </div>
-      <p style={{marginTop: "30px"}}>Total Pre Pay Period: ${total}.00</p>
+      {duration == 10 && timeFrame == 'yearly' ? (
+        <>
+            <p style={{marginTop: "5px"}}>Discount: ${total}.00 - $2000.00</p>
+            <p style={{marginTop: "0px"}}>NEW Total Pre Pay Period: ${total - 2000}.00</p>
+        </>
+      ) : (
+        <p style={{marginTop: "30px"}}>Total Pre Pay Period: ${total}.00</p>
+      )}
       <p>What comes with?</p>
       <p style={{margin: "0px"}}>{benefits}</p>
+      <button 
+      style={{marginTop: "10px", 
+      backgroundColor: "#399afb", 
+      color: "white",
+      border: "none",
+      padding: "10px 15px",}}>
+        Choose
+        </button>
     </div>
   );
 }

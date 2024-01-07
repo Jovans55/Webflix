@@ -16,6 +16,7 @@ function SignUp() {
         </Link>
         <section style={{marginTop: "40px"}}>
           <h1 style={{textAlign: "center"}}>This is for life.</h1>
+          <p style={{textAlign: "center"}}>Please choose a plan</p>
           {!plan == "none" ? (
             <SignUpContainer plan={plan}/>
           ) : (
@@ -39,7 +40,7 @@ function SignUp() {
               color={"#FFD700"}
               price={"49.99"} 
               howLong={"1"} 
-              benefits={"Gold Super Awesome Access"}
+              benefits={"Super Awesome Access"}
               />
             </div>
           )}

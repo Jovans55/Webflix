@@ -39,7 +39,7 @@ function Home() {
                     </Link>
                 </div>
             </section>
-            <h1 id="ad" style={{marginTop: "0px"}}> 🔥SALE! Sign up for 10 years today get $500 off!🔥</h1>
+            <h1 id="ad" style={{marginTop: "0px"}}> 🔥SALE! Sign up for 10 years today get $2000 off!🔥</h1>
             <section className='watchDevices'>
                 <div>
                     <h1>Watch on your fridge</h1>
