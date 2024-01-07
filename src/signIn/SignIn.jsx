@@ -1,14 +1,7 @@
-import { useState } from "react";
 import { Link } from 'react-router-dom';
 import SignInContainer from "./signInContainer";
-import SignUpContainer from "./signUpContainer";
 
 function SignIn() {
-  const [newUser, setNewUser] = useState(false)
-
-  const handleSignUpClick = () => {
-    setNewUser(!newUser);
-  };
 
   return (
     <div className="appContainer">
@@ -21,11 +14,7 @@ function SignIn() {
           />
         </Link>
       </header>
-        {newUser ? (
-          <SignUpContainer onSignUpClick={handleSignUpClick}/>
-          ):(
-          <SignInContainer onSignUpClick={handleSignUpClick}/>
-        )}
+      <SignInContainer />
       <footer id="mainFooter">
         <div>
           <p>Questions? Call 1-123-456-789</p>

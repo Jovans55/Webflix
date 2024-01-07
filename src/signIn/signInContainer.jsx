@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from 'react-router-dom';
 import { getData } from "../../api/api";
 
-function SignInContainer({ onSignUpClick }) {
+function SignInContainer() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
@@ -68,7 +68,7 @@ function SignInContainer({ onSignUpClick }) {
           <a>Need help?</a>
         </div>
         <p style={{ fontWeight: "bold" }}>New to Webflix?</p>
-        <Link to="/signup" style={{textDecoration: "none", color: "white"}}>
+        <Link to="/signup" style={{textDecoration: "none", color: "white", fontWeight: "bold"}}>
           Sign Up!
         </Link>
       </div>
