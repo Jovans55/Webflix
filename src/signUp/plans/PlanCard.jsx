@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function PlanCard({ type, price, howLong, benefits }) {
+function PlanCard({ type, color, price, howLong, benefits }) {
   const [timeFrame, setTimeFrame] = useState("monthly");
   const [duration, setDuration] = useState(howLong);
   const [total, setTotal] = useState(howLong * price);
@@ -19,35 +19,45 @@ function PlanCard({ type, price, howLong, benefits }) {
   };
 
   return (
-    <div>
-      <h1>{type}</h1>
-      <h1>${price} /mo</h1>
-      <p>In what time frame can we collect payments?</p>
-      {timeFrame == "monthly" ? (
-          <input
-            type="number"
-            min="1"
-            max="11"
-            style={{ width: "50px" }}
-            value={duration}
-            onChange={handleDurationChange}
-          />
-      ) : (
-        <input
-            type="number"
-            min="1"
-            max="99"
-            style={{ width: "50px" }}
-            value={duration}
-            onChange={handleDurationChange}
-          />
-      )}
-      <select name="timeFrame" value={timeFrame} onChange={handleTimeFrameChange}>
-        <option value="monthly">Monthly</option>
-        <option value="yearly">Yearly</option>
-      </select>
-      <p>Total Pre Pay Period: ${total}.00</p>
-      <p>{benefits}</p>
+    <div className="planCard">
+      <h1 style={{backgroundColor: `${color}`, margin: "0px", padding: "20px 7px"}}>{type}</h1>
+      <h1 style={{fontSize: "25px"}}>${price} /mo</h1>
+      <div style={{border: "5px dotted black", padding: "25px 5px"}}>
+        <p>In what time frame can we collect payments?</p>
+        {timeFrame == "monthly" ? (
+            <input
+                type="number"
+                className="timeFrameInput"
+                min="1"
+                max="11"
+                style={{ width: "30px" }}
+                value={duration}
+                onChange={handleDurationChange}
+            />
+        ) : (
+            <input
+                type="number"
+                className="timeFrameInput"
+                min="1"
+                max="99"
+                style={{ width: "30px"}}
+                value={duration}
+                onChange={handleDurationChange}
+            />
+        )}
+        <select name="timeFrame" value={timeFrame} onChange={handleTimeFrameChange} 
+        style={{
+            marginLeft: "3px",
+            width: "80px",
+            padding: "1px"
+        }}>
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+        </select>
+      </div>
+      <p style={{marginTop: "30px"}}>Total Pre Pay Period: ${total}.00</p>
+      <p>What comes with?</p>
+      <p style={{margin: "0px"}}>{benefits}</p>
     </div>
   );
 }

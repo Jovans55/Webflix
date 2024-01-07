@@ -14,25 +14,29 @@ function SignUp() {
             width={"200px"}
             style={{margin: "10px 0px 0px 15px"}}/>
         </Link>
-        <section>
+        <section style={{marginTop: "40px"}}>
+          <h1 style={{textAlign: "center"}}>This is for life.</h1>
           {!plan == "none" ? (
             <SignUpContainer plan={plan}/>
           ) : (
-            <div>
+            <div id="planCardHolder">
               <PlanCard 
-              type={"Copper"} 
+              type={"Copper"}
+              color={"#B87333"}
               price={"19.99"} 
               howLong={"1"} 
               benefits={"Basic Access"}
               />
               <PlanCard 
-              type={"Silver"} 
+              type={"Silver"}
+              color={"#c0c0c0"}
               price={"29.99"} 
               howLong={"1"} 
               benefits={"Awesome Access"}
               />
               <PlanCard 
-              type={"Gold"} 
+              type={"Gold"}
+              color={"#FFD700"}
               price={"49.99"} 
               howLong={"1"} 
               benefits={"Gold Super Awesome Access"}
