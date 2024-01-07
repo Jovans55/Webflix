@@ -19,7 +19,7 @@ function SignIn() {
           ):(
           <SignInContainer onSignUpClick={handleSignUpClick}/>
         )}
-      <footer>
+      <footer id="mainFooter">
         <div>
           <p>Questions? Call 1-123-456-789</p>
           <section>

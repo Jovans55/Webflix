@@ -61,7 +61,7 @@ function Home() {
                 fontSize: "19px",
                 }}>Sign Up</button>
             </div>
-            <footer>
+            <footer id="mainFooter">
                 <div>
                     <p>Questions? Call 1-123-456-789</p>
                     <section>
