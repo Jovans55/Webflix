@@ -133,6 +133,23 @@ body {
   display: block;
 }
 
+/* FAQ CSS */
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.FaqText {
+  animation: slideIn 0.3s ease-out;
+}
+
 @media screen and (max-width: 650px) {
 
   .appContainer footer div section div {

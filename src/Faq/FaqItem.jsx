@@ -23,7 +23,8 @@ const FaqItem = ({ question, answer }) => {
               padding: "15px 5px",
               width: "100%",
             }}>{question}</strong>
-            <div style={{ 
+            <div className="FaqText"
+              style={{ 
               backgroundColor: "#3D3D3D",
               width: "100%",
               padding: "15px 5px",
