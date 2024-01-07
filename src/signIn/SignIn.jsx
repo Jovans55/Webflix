@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 import SignInContainer from "./signInContainer";
 import SignUpContainer from "./signUpContainer";
 
@@ -12,7 +13,13 @@ function SignIn() {
   return (
     <div className="appContainer">
       <header>
-        <img src='/webflix.png' alt='Webflix logo light blue' width={"200px"} height={"100%"} style={{margin: "10px 0px 0px 15px"}}/>
+        <Link to="/">
+          <img src='/webflix.png' 
+          alt='Webflix logo light blue' 
+          width={"200px"} height={"100%"} 
+          style={{margin: "10px 0px 0px 15px"}}
+          />
+        </Link>
       </header>
         {newUser ? (
           <SignUpContainer onSignUpClick={handleSignUpClick}/>
