@@ -6,20 +6,28 @@ import PlanCard from './plans/planCard';
 function SignUp() {
   const [plan, SetPlan] = useState("none");
 
+  function handleSettingPlan(type) {
+    console.log(type)
+    const newPlan = type
+    SetPlan(type)
+    console.log(newPlan);
+  }
+
   return (
-    <div>
+    <div id="signUpPage">
         <Link to="/">
             <img src='/webflix.png' 
             alt='Webflix logo light blue' 
             width={"200px"}
             style={{margin: "10px 0px 0px 15px"}}/>
         </Link>
-        <section style={{marginTop: "40px"}}>
-          <h1 style={{textAlign: "center"}}>This is for life.</h1>
-          <p style={{textAlign: "center"}}>Please choose a plan</p>
-          {!plan == "none" ? (
-            <SignUpContainer plan={plan}/>
-          ) : (
+        <section style={{margin: "40px 0px", display: plan !== "none" ? "flex" : "block", justifyContent: "center"}}>
+          {plan !== "none" ? (
+            <SignUpContainer plan={plan} setPlan={handleSettingPlan}/>
+            ) : (
+            <>
+            <h1 style={{textAlign: "center"}}>This is for life.</h1>
+            <p style={{textAlign: "center"}}>Please choose a plan</p>
             <div id="planCardHolder">
               <PlanCard 
               type={"Copper"}
@@ -27,6 +35,7 @@ function SignUp() {
               price={"19.99"} 
               howLong={"1"} 
               benefits={"Basic Access"}
+              setPlan={handleSettingPlan}
               />
               <PlanCard 
               type={"Silver"}
@@ -34,6 +43,7 @@ function SignUp() {
               price={"29.99"} 
               howLong={"1"} 
               benefits={"Awesome Access"}
+              setPlan={handleSettingPlan}
               />
               <PlanCard 
               type={"Gold"}
@@ -41,8 +51,10 @@ function SignUp() {
               price={"49.99"} 
               howLong={"1"} 
               benefits={"Super Awesome Access"}
+              setPlan={handleSettingPlan}
               />
             </div>
+            </>
           )}
         </section>
     </div>

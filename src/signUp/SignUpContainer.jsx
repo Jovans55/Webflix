@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from 'react-router-dom';
 import { postData } from "../../api/api";
 
-function SignUpContainer({ plan }) {
+function SignUpContainer({ plan, setPlan }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -76,7 +76,7 @@ function SignUpContainer({ plan }) {
   return (
     <section id="signInContainer">
       <div id="signIn">
-        <h1 style={{ fontSize: "32px" }}>Sign Up</h1>
+        <h1 style={{ fontSize: "32px" }}>Finish Sign Up</h1>
         <input
           className="inputField"
           placeholder="First Name"
@@ -131,7 +131,13 @@ function SignUpContainer({ plan }) {
         <div style={{ marginBottom: "50px" }}>
           <a>Need help?</a>
         </div>
-        <p style={{ fontWeight: "bold" }}>Already Have An Account?</p>
+        <p style={{ fontWeight: "bold" }}> Have an account or wrong plan?</p>
+        <button style={{
+        display: "block", background: "none", 
+        border: "none", color: "white",
+        padding: "0px", fontSize: "16px",
+        fontWeight: "bold", cursor: "pointer",
+        marginBottom: "5px"}} onClick={() => setPlan("none")}>Back to plans</button>
         <Link to="/signin" style={{textDecoration: "none", color: "white", fontWeight: "bold"}}>
           Back to sign in
         </Link>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function PlanCard({ type, color, price, howLong, benefits }) {
+function PlanCard({ type, color, price, howLong, benefits, setPlan }) {
   const [timeFrame, setTimeFrame] = useState("monthly");
   const [duration, setDuration] = useState(howLong);
   const [total, setTotal] = useState(howLong * price);
@@ -70,7 +70,8 @@ function PlanCard({ type, color, price, howLong, benefits }) {
       )}
       <p>What comes with?</p>
       <p style={{margin: "0px"}}>{benefits}</p>
-      <button 
+      <button
+      onClick={() => setPlan(type)}
       style={{marginTop: "10px", 
       backgroundColor: "#399afb", 
       color: "white",
