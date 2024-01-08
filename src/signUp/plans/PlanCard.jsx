@@ -60,7 +60,7 @@ function PlanCard({ type, color, price, howLong, benefits, setPlan }) {
             <option value="yearly">Yearly</option>
         </select>
       </div>
-      {duration == 10 && timeFrame == 'yearly' ? (
+      {duration >= 10 && timeFrame == 'yearly' ? (
         <>
             <p style={{marginTop: "5px"}}>Discount: ${total}.00 - $2000.00</p>
             <p style={{marginTop: "0px"}}>NEW Total Pre Pay Period: ${total - 2000}.00</p>

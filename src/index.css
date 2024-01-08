@@ -152,6 +152,21 @@ body {
 
 /* Sign Up CSS */
 
+@keyframes slideUp {
+  from {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.signUpContainer{
+  animation: slideUp 0.8s ease-out;
+}
+
 #signUpPage{
   flex-grow: 1;
   display: flex;
@@ -170,11 +185,12 @@ body {
 .planCard {
   background-color: white;
   width: 330px;
-  box-shadow: black -15px 15px;
+  box-shadow: rgba(0, 0, 0, 0.607) -15px 15px;
   margin: 0px 20px;
   color: black;
   display: flex;
   flex-direction: column;
+  animation: slideIn 0.8s ease-out;
 }
 
 .planCard > * {

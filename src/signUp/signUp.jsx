@@ -7,10 +7,7 @@ function SignUp() {
   const [plan, SetPlan] = useState("none");
 
   function handleSettingPlan(type) {
-    console.log(type)
-    const newPlan = type
     SetPlan(type)
-    console.log(newPlan);
   }
 
   return (

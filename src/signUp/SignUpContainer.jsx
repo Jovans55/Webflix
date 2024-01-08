@@ -50,7 +50,7 @@ function SignUpContainer({ plan, setPlan }) {
 
   if (success) {
     return (
-      <section id="signInContainer">
+      <section id="signInContainer" className="signUpContainer">
         <div id="signIn">
           <h1>Sign Up Successful!</h1>
           <p>Please return to Sign In.</p>
@@ -74,7 +74,7 @@ function SignUpContainer({ plan, setPlan }) {
   }
 
   return (
-    <section id="signInContainer">
+    <section id="signInContainer" className="signUpContainer">
       <div id="signIn">
         <h1 style={{ fontSize: "32px" }}>Finish Sign Up</h1>
         <input
