@@ -15,7 +15,7 @@ function SignUp() {
 
   return (
     <div id="signUpPage">
-        <Link to="/">
+        <Link to="/" style={{backgroundColor: "black"}}>
             <img src='/webflix.png' 
             alt='Webflix logo light blue' 
             width={"200px"}
