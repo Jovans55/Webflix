@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { getData } from "../../api/api";
+import { singInAPI } from "../../api/api";
+import Cookies from "js-cookie";
 
 function SignInContainer() {
   const [email, setEmail] = useState("");
@@ -12,12 +13,15 @@ function SignInContainer() {
 
   const handleSubmit = async () => {
     try {
-      const data = await getData(email, password);
-      console.log(data);
+      const data = await singInAPI(email, password);
+
       if (data.error) {
         setError("Wrong email or password.");
       } else {
         setError(null);
+
+        Cookies.set("token", data, { expires: remember ? 365 : 1 });
+
         navigate("/popcorntime");
       }
     } catch (error) {

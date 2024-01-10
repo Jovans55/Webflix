@@ -1,11 +1,11 @@
 import express from "express";
 const router = express.Router();
 import pkg from "jsonwebtoken";
-const { sign } = pkg;
+const { sign, verify } = pkg;
 import dotenv from "dotenv";
 import UserModel from "../models/userModel.js";
 
-router.get("/users", async (req, res) => {
+router.get("/signin", async (req, res) => {
   try {
     const { email, password } = req.query;
 
@@ -33,6 +33,32 @@ router.get("/users", async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+router.get("/auth", async (req, res) => {
+  try {
+    const token = req.headers.authorization;
+
+    if (!token) {
+      return res
+        .status(401)
+        .json({ error: "Unauthorized: Token not provided" });
+    }
+
+    const decodedToken = verify(token, process.env.SSV);
+
+    const user = await UserModel.findById(decodedToken.userId);
+
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    res.json(user);
+  } catch (error) {
+    console.error(error);
+
+    res.status(401).json({ error: "Unauthorized: Invalid or expired token" });
   }
 });
 

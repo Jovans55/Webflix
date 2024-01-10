@@ -1,7 +1,7 @@
-const getData = async (email, password) => {
+const singInAPI = async (email, password) => {
   try {
     const response = await fetch(
-      `http://localhost:3001/api/users?email=${email}&password=${password}`,
+      `http://localhost:3001/api/signin?email=${email}&password=${password}`,
       {
         method: "GET",
         headers: {
@@ -15,6 +15,24 @@ const getData = async (email, password) => {
     return data;
   } catch (error) {
     console.error("Error posting data:", error);
+  }
+};
+
+const getData = async (token) => {
+  try {
+    const response = await fetch("http://localhost:3001/api/auth", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `${token}`,
+      },
+    });
+
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
   }
 };
 
@@ -40,4 +58,4 @@ const postData = async (firstName, lastName, email, password) => {
   }
 };
 
-export { getData, postData };
+export { singInAPI, getData, postData };
