@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { getData } from "../../api/api";
 
 function SignInContainer() {
@@ -11,10 +11,10 @@ function SignInContainer() {
   const handleSubmit = async () => {
     try {
       const data = await getData(email, password);
-      if(data.error){
+      if (data.error) {
         setError("Wrong email or password.");
       } else {
-        setError(null)
+        setError(null);
         document.cookie = `userEmail=${email}; path=/`;
         console.log("cookie", document);
       }
@@ -24,29 +24,29 @@ function SignInContainer() {
   };
 
   const handleCookieCreation = () => {
-    setRemember(!remember)
-  }
+    setRemember(!remember);
+  };
 
   return (
-    <section id='signInContainer'>
-      <div id='signIn'>
+    <section id="signInContainer">
+      <div id="signIn">
         <h1 style={{ fontSize: "32px" }}>Sign In</h1>
         <input
           className="inputField"
-          placeholder='Email'
+          placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          style={{ borderColor: error ? 'red' : null }}
+          style={{ borderColor: error ? "red" : null }}
         />
         <input
           className="inputField"
-          placeholder='Password'
+          placeholder="Password"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          style={{ borderColor: error ? 'red' : null }}
+          style={{ borderColor: error ? "red" : null }}
         />
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+        {error && <p style={{ color: "red" }}>{error}</p>}
         <button
           onClick={handleSubmit}
           style={{
@@ -57,18 +57,26 @@ function SignInContainer() {
             border: "none",
             borderRadius: "5px",
             margin: "30px 0px 10px",
-            fontSize: "17px"
+            fontSize: "17px",
           }}
         >
           Sign In
         </button>
         <div style={{ marginBottom: "50px" }}>
-          <input type="checkbox" name="Remember me" value="Remember" onClick={handleCookieCreation} />
+          <input
+            type="checkbox"
+            name="Remember me"
+            value="Remember"
+            onClick={handleCookieCreation}
+          />
           <label style={{ marginRight: "80px" }}>Remember me</label>
           <a>Need help?</a>
         </div>
         <p style={{ fontWeight: "bold" }}>New to Webflix?</p>
-        <Link to="/signup" style={{textDecoration: "none", color: "white", fontWeight: "bold"}}>
+        <Link
+          to="/signup"
+          style={{ textDecoration: "none", color: "white", fontWeight: "bold" }}
+        >
           Sign Up!
         </Link>
       </div>

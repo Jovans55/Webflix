@@ -1,16 +1,17 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import SignInContainer from "./SignInContainer";
 
 function SignIn() {
-
   return (
     <div className="appContainer">
       <header>
         <Link to="/">
-          <img src='/webflix.png' 
-          alt='Webflix logo light blue' 
-          width={"200px"} height={"100%"} 
-          style={{margin: "10px 0px 0px 15px"}}
+          <img
+            src="/webflix.png"
+            alt="Webflix logo light blue"
+            width={"200px"}
+            height={"100%"}
+            style={{ margin: "10px 0px 0px 15px" }}
           />
         </Link>
       </header>

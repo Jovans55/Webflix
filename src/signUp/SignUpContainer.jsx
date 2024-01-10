@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { postData } from "../../api/api";
 
 function SignUpContainer({ plan, setPlan }) {
@@ -40,8 +40,8 @@ function SignUpContainer({ plan, setPlan }) {
       if (data.error) {
         setError(data.error);
         return;
-      } else if (data.success){
-        setSuccess(true)
+      } else if (data.success) {
+        setSuccess(true);
       }
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -55,19 +55,19 @@ function SignUpContainer({ plan, setPlan }) {
           <h1>Sign Up Successful!</h1>
           <p>Please return to Sign In.</p>
           <button
-          style={{
-            color: "white",
-            backgroundColor: "#399afb",
-            width: "300px",
-            padding: "10px 15px",
-            border: "none",
-            borderRadius: "5px",
-            margin: "0px 0px 10px",
-            fontSize: "17px",
-          }}
-        >
-          Back To Sign In
-        </button>
+            style={{
+              color: "white",
+              backgroundColor: "#399afb",
+              width: "300px",
+              padding: "10px 15px",
+              border: "none",
+              borderRadius: "5px",
+              margin: "0px 0px 10px",
+              fontSize: "17px",
+            }}
+          >
+            Back To Sign In
+          </button>
         </div>
       </section>
     );
@@ -94,7 +94,13 @@ function SignUpContainer({ plan, setPlan }) {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          style={{ borderColor: error == "Email In Use" || error == "Please enter a valid email address" ? 'red' : null }}
+          style={{
+            borderColor:
+              error == "Email In Use" ||
+              error == "Please enter a valid email address"
+                ? "red"
+                : null,
+          }}
         ></input>
         <input
           className="inputField"
@@ -102,7 +108,9 @@ function SignUpContainer({ plan, setPlan }) {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          style={{ borderColor: error == "Passwords Don't Match" ? 'red' : null }}
+          style={{
+            borderColor: error == "Passwords Don't Match" ? "red" : null,
+          }}
         ></input>
         <input
           className="inputField"
@@ -110,7 +118,9 @@ function SignUpContainer({ plan, setPlan }) {
           type="password"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
-          style={{ borderColor: error == "Passwords Don't Match" ? 'red' : null }}
+          style={{
+            borderColor: error == "Passwords Don't Match" ? "red" : null,
+          }}
         ></input>
         {error && <p style={{ color: "red" }}>{error}</p>}
         <button
@@ -132,13 +142,26 @@ function SignUpContainer({ plan, setPlan }) {
           <a>Need help?</a>
         </div>
         <p style={{ fontWeight: "bold" }}> Have an account or wrong plan?</p>
-        <button style={{
-        display: "block", background: "none", 
-        border: "none", color: "white",
-        padding: "0px", fontSize: "16px",
-        fontWeight: "bold", cursor: "pointer",
-        marginBottom: "5px"}} onClick={() => setPlan("none")}>Back to plans</button>
-        <Link to="/signin" style={{textDecoration: "none", color: "white", fontWeight: "bold"}}>
+        <button
+          style={{
+            display: "block",
+            background: "none",
+            border: "none",
+            color: "white",
+            padding: "0px",
+            fontSize: "16px",
+            fontWeight: "bold",
+            cursor: "pointer",
+            marginBottom: "5px",
+          }}
+          onClick={() => setPlan("none")}
+        >
+          Back to plans
+        </button>
+        <Link
+          to="/signin"
+          style={{ textDecoration: "none", color: "white", fontWeight: "bold" }}
+        >
           Back to sign in
         </Link>
       </div>
