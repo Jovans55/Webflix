@@ -66,7 +66,15 @@ function SignUpContainer({ plan, setPlan }) {
               fontSize: "17px",
             }}
           >
-            Back To Sign In
+            <Link
+              to="/signin"
+              style={{
+                textDecoration: "none",
+                color: "white",
+              }}
+            >
+              Back To Sign In
+            </Link>
           </button>
         </div>
       </section>

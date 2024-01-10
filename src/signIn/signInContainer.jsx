@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getData } from "../../api/api";
 
 function SignInContainer() {
@@ -8,6 +8,8 @@ function SignInContainer() {
   const [remember, setRemember] = useState(false);
   const [error, setError] = useState(null);
 
+  const navigate = useNavigate();
+
   const handleSubmit = async () => {
     try {
       const data = await getData(email, password);
@@ -15,8 +17,7 @@ function SignInContainer() {
         setError("Wrong email or password.");
       } else {
         setError(null);
-        document.cookie = `userEmail=${email}; path=/`;
-        console.log("cookie", document);
+        navigate("/popcorntime");
       }
     } catch (error) {
       console.error("Error fetching data:", error);
