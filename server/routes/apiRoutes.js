@@ -1,5 +1,8 @@
 import express from "express";
 const router = express.Router();
+import pkg from "jsonwebtoken";
+const { sign } = pkg;
+import dotenv from "dotenv";
 import UserModel from "../models/userModel.js";
 
 router.get("/users", async (req, res) => {
@@ -16,7 +19,14 @@ router.get("/users", async (req, res) => {
     }
 
     if (isPasswordMatch) {
-      res.json(user);
+      const userPayload = {
+        userId: user._id,
+        email: user.email,
+        password: user.password,
+      };
+
+      const loginToken = sign(userPayload, process.env.SSV);
+      res.json(loginToken);
     } else {
       res.send({ error: "Wrong Password" });
     }

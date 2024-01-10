@@ -11,6 +11,7 @@ const getData = async (email, password) => {
     );
 
     const data = await response.json();
+
     return data;
   } catch (error) {
     console.error("Error posting data:", error);

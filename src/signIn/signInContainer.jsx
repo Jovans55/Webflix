@@ -13,6 +13,7 @@ function SignInContainer() {
   const handleSubmit = async () => {
     try {
       const data = await getData(email, password);
+      console.log(data);
       if (data.error) {
         setError("Wrong email or password.");
       } else {
