@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import SignInContainer from "./SignInContainer";
 
-function SignIn() {
+function SignIn({ auth }) {
   return (
     <div className="appContainer">
       <header>
@@ -15,7 +15,7 @@ function SignIn() {
           />
         </Link>
       </header>
-      <SignInContainer />
+      <SignInContainer authFun={auth} />
       <footer id="mainFooter">
         <div>
           <p>Questions? Call 1-123-456-789</p>

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { singInAPI } from "../../api/api";
 import Cookies from "js-cookie";
 
-function SignInContainer() {
+function SignInContainer({ authFun }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(false);
@@ -21,7 +21,7 @@ function SignInContainer() {
         setError(null);
 
         Cookies.set("token", data, { expires: remember ? 365 : 1 });
-
+        authFun(true);
         navigate("/popcorntime");
       }
     } catch (error) {
