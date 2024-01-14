@@ -9,6 +9,7 @@ import Cookies from "js-cookie";
 
 function AppRoutes() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [userData, setUserData] = useState("");
 
   const fetchData = async () => {
     try {
@@ -18,6 +19,7 @@ function AppRoutes() {
       if (data.error) {
         setIsAuthenticated(false);
       } else {
+        setUserData(data);
         setIsAuthenticated(true);
       }
     } catch (error) {
@@ -30,8 +32,6 @@ function AppRoutes() {
     setIsAuthenticated(value);
   }
 
-  console.log(isAuthenticated);
-
   useEffect(() => {
     fetchData();
   }, []);
@@ -43,7 +43,10 @@ function AppRoutes() {
           <Route path="/" element={<Navigate to="/popcorntime" />} />
           <Route path="/signin" element={<Navigate to="/popcorntime" />} />
           <Route path="/signup" element={<Navigate to="/popcorntime" />} />
-          <Route path="/popcorntime" element={<VideoMain />} />
+          <Route
+            path="/popcorntime"
+            element={<VideoMain userData={userData} />}
+          />
         </>
       ) : (
         <>
