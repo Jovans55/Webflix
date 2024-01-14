@@ -6,10 +6,11 @@ import VideoMenu from "./Videomenu";
 function VideoMain({ userData }) {
   const [menu, setMenu] = useState(false);
   return (
-    <div>
+    <div id="videoMain">
       {menu && <VideoMenu />}
-      <button onClick={() => setMenu(!menu)}>btn</button>
-      <h1>{userData.firstName}</h1>
+      <section>
+        <button onClick={() => setMenu(!menu)}>btn</button>
+      </section>
     </div>
   );
 }

@@ -198,6 +198,29 @@ body {
   font-weight: bold;
 }
 
+/* VideoMain / Video Menu */
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#videoMenu{
+  display: flex;
+  flex-direction: column;
+  animation: slideRight 0.6s ease-out;
+}
+
+#videoMain{
+  display: flex;
+}
+
 @media screen and (max-width: 650px) {
 
   #mainFooter div section div {
