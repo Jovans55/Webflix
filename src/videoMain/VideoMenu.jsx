@@ -1,10 +1,10 @@
 function VideoMenu() {
   return (
     <div id="videoMenu">
-      <h1>Account</h1>
-      <h1>Favorites</h1>
-      <h1>Settings</h1>
-      <h1>Cookies</h1>
+      <h2>Account</h2>
+      <h2>Favorites</h2>
+      <h2>Settings</h2>
+      <h2>Cookies</h2>
     </div>
   );
 }
