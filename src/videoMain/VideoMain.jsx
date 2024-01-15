@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import VideoMenu from "./Videomenu";
 
 function VideoMain({ userData }) {
   const [menu, setMenu] = useState(false);
   return (
     <div id="videoMain">
-      <section>
+      <section style={{ borderBottom: "5px solid #101012" }}>
         <button id="btnBarsBtn" onClick={() => setMenu(!menu)}>
           <p className="btnBars"></p>
           <p className="btnBars"></p>
@@ -19,7 +19,21 @@ function VideoMain({ userData }) {
           style={{ margin: "5px 0px 0px 0px" }}
         />
       </section>
-      {menu && <VideoMenu />}
+      <section id="videoMainBody">
+        {menu && <VideoMenu />}
+        <iframe
+          width="250"
+          height="200"
+          frameBorder="0"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        ></iframe>
+        <iframe
+          width="250"
+          height="200"
+          frameBorder="0"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        ></iframe>
+      </section>
     </div>
   );
 }
