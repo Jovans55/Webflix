@@ -214,14 +214,17 @@ body {
 #videoMenu {
   display: inline-flex;
   flex-direction: column;
-  padding-right: 35px;
-  padding-left: 5px;
+  padding-right: 55px;
+  padding-left: 10px;
   max-width: 150px;
   height: 95.9vh;
   background-color: #101012;
   margin: 0px;
   animation: slideRight 0.6s ease-out;
-  border: 5px solid blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 #videoHeader{
@@ -230,10 +233,12 @@ body {
 
 #videoMainBody{
   display: flex;
+  position: relative;
 }
 
 #videoMainBodyDiv{
   margin: auto;
+  z-index: 0;
 }
 
 #videoMainBodyDiv iframe,
