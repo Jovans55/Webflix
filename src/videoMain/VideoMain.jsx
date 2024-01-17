@@ -20,8 +20,8 @@ function VideoMain({ userData }) {
           style={{ margin: "5px 0px 0px 0px" }}
         />
       </section>
-      {menu && <VideoMenu />}
       <section id="videoMainBody">
+        {menu && <VideoMenu />}
         <div id="videoMainBodyDiv">
           <Slideshow />
           <iframe

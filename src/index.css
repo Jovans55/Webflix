@@ -230,13 +230,20 @@ body {
 
 #videoMainBody{
   display: flex;
-  justify-content: center;
 }
 
 #videoMainBodyDiv{
-  display: flex;
-  flex-direction: column;
-  border: 5px solid pink;
+  margin: auto;
+}
+
+#videoMainBodyDiv iframe,
+#videoMainBodyDiv img {
+  margin-bottom: 100px; /* Adjust as needed */
+}
+
+#videoMainBodyDiv iframe {
+  width: 250px;
+  height: 200px;
 }
 
 #btnBarsBtn{
