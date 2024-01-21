@@ -296,6 +296,17 @@ body {
   }
 }
 
+/* Video Player */
+
+#videoContainer{
+  margin: auto;
+  margin-top: 2%;
+  height: 80vh;
+  width: 80vw;
+  border: 5px solid #399afb;
+  border-radius: 5px;
+}
+
 
 #btnBarsBtn:hover{
   background-color: rgba(128, 128, 128, 0.341);

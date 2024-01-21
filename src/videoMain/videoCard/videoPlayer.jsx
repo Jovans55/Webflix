@@ -18,7 +18,7 @@ function VideoPlayer() {
       </section>
       <div id="videoContainer">
         <iframe
-          height="500px"
+          style={{ width: "100%", height: "100%" }}
           frameBorder="0"
           src={`https://www.youtube.com/embed/${imgLink}`}
         ></iframe>
