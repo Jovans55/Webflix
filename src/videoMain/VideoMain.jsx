@@ -24,24 +24,56 @@ function VideoMain({ userData }) {
         {menu && <VideoMenu />}
         <div id="videoMainBodyDiv">
           <Slideshow />
-          <iframe
-            width="250"
-            height="200"
-            frameBorder="0"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          ></iframe>
-          <iframe
-            width="250"
-            height="200"
-            frameBorder="0"
-            src="https://www.youtube.com/embed/6WlI24rv__g?autoplay=1"
-          ></iframe>
-          <img
-            width="300"
-            height="100%"
-            src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
-            alt="YouTube Thumbnail"
-          />
+          <h1
+            style={{ borderBottom: "5px solid #101012", paddingBottom: "10px" }}
+          >
+            Popular
+          </h1>
+          <section
+            style={{
+              overflowY: "hidden",
+              overflowX: "auto",
+              whiteSpace: "nowrap",
+              maxWidth: "1000px",
+            }}
+          >
+            <iframe
+              width="250"
+              height="200"
+              frameBorder="0"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            ></iframe>
+            <iframe
+              width="250"
+              height="200"
+              frameBorder="0"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            ></iframe>
+            <iframe
+              width="250"
+              height="200"
+              frameBorder="0"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            ></iframe>
+            <iframe
+              width="250"
+              height="200"
+              frameBorder="0"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            ></iframe>
+            <iframe
+              width="250"
+              height="200"
+              frameBorder="0"
+              src="https://www.youtube.com/embed/6WlI24rv__g?autoplay=1"
+            ></iframe>
+            <img
+              width="300"
+              height="100%"
+              src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
+              alt="YouTube Thumbnail"
+            />
+          </section>
         </div>
       </section>
     </div>
