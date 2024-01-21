@@ -15,9 +15,11 @@ const titleStyle = {
   padding: "10px",
   margin: "15px",
   marginTop: "0px",
-  background: "#399afb",
+  background: "#300afb",
   color: "white",
   fontWeight: "bold",
+  fontSize: "14px",
+  borderRadius: "0px 0px 50px 0px",
 };
 
 const divStyle = {
