@@ -34,7 +34,7 @@ function VideoMain({ userData }) {
             width="250"
             height="200"
             frameBorder="0"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+            src="https://www.youtube.com/embed/6WlI24rv__g?autoplay=1"
           ></iframe>
           <img
             width="300"
