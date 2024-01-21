@@ -61,6 +61,14 @@ function VideoMain({ userData }) {
               imgLink={"N8siuNjyV7A"}
               videoTitle={"1 Hour Of Brain Rot Cat Video"}
             />
+            <VideoCard
+              imgLink={"geV4yBkLjWE"}
+              videoTitle={"Generic Funny Video"}
+            />
+            <VideoCard
+              imgLink={"Q_iTGX9MZkM"}
+              videoTitle={"4 HOUR Family Compilation?!? 💀"}
+            />
           </section>
           <h1
             style={{ borderBottom: "5px solid #101012", paddingBottom: "10px" }}
@@ -75,6 +83,18 @@ function VideoMain({ userData }) {
             <VideoCard
               imgLink={"JLL5NM8CAk4"}
               videoTitle={"Professional Pillow Fighting"}
+            />
+            <VideoCard
+              imgLink={"0s-LxGxmvgg"}
+              videoTitle={"Death Diving World Championship"}
+            />
+            <VideoCard
+              imgLink={"sxbL6hSRf0g"}
+              videoTitle={"Superman Bullds PC"}
+            />
+            <VideoCard
+              imgLink={"ndkh8MQw9ZM"}
+              videoTitle={"Dudes with Katanas"}
             />
           </section>
           <h1
@@ -98,6 +118,15 @@ function VideoMain({ userData }) {
             <VideoCard
               imgLink={"QrvV-R3y2xY"}
               videoTitle={"How To Center a Div"}
+            />
+            <VideoCard imgLink={"tGVnBAHLApA"} videoTitle={"Calculus 3"} />
+            <VideoCard
+              imgLink={"R8ste6xQAMo"}
+              videoTitle={"Carburetor Repair"}
+            />
+            <VideoCard
+              imgLink={"XAoOpOuc2Ms"}
+              videoTitle={"Learn to fly a plane in 5 minutes."}
             />
           </section>
         </div>

@@ -266,6 +266,20 @@ body {
   white-space: nowrap;
   width: 100vw;
   max-width: 1000px;
+  padding-bottom: 15px;
+}
+
+.VideosSectionContainer::-webkit-scrollbar {
+  border-radius: 50px;
+}
+
+.VideosSectionContainer::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+.VideosSectionContainer::-webkit-scrollbar-thumb {
+  background: #131313;
+  border-radius: 50px;
 }
 
 /* Video Card */
