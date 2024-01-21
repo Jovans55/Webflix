@@ -4,6 +4,7 @@ import Home from "./home";
 import SignIn from "./signIn/SignIn";
 import SignUp from "./signUp/SignUp";
 import VideoMain from "./videoMain/VideoMain";
+import VideoPlayer from "./videoMain/videoCard/videoPlayer";
 import { getData } from "../api/api";
 import Cookies from "js-cookie";
 
@@ -47,6 +48,7 @@ function AppRoutes() {
             path="/popcorntime"
             element={<VideoMain userData={userData} />}
           />
+          <Route path="/videoplayer/:imgLink" element={<VideoPlayer />} />
         </>
       ) : (
         <>

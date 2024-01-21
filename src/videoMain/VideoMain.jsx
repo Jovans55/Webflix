@@ -2,6 +2,7 @@ import { useState } from "react";
 import VideoMenu from "./Videomenu";
 import VideoCard from "./videoCard/VideoCard";
 import Slideshow from "./SlideShow";
+import { Link } from "react-router-dom";
 
 function VideoMain({ userData }) {
   const [menu, setMenu] = useState(false);
@@ -13,13 +14,15 @@ function VideoMain({ userData }) {
           <p className="btnBars"></p>
           <p className="btnBars"></p>
         </button>
-        <img
-          src="/webflix.png"
-          alt="Webflix logo light blue"
-          width={"100px"}
-          height={"35px"}
-          style={{ margin: "5px 0px 0px 0px" }}
-        />
+        <Link to="/popcorntime">
+          <img
+            src="/webflix.png"
+            alt="Webflix logo light blue"
+            width={"100px"}
+            height={"35px"}
+            style={{ margin: "5px 0px 0px 0px" }}
+          />
+        </Link>
       </section>
       <section id="videoMainBody">
         {menu && <VideoMenu />}
