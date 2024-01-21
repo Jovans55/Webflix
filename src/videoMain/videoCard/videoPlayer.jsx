@@ -5,7 +5,7 @@ function VideoPlayer() {
   console.log(imgLink);
   return (
     <div>
-      <section id="videoHeader">
+      <section id="videoHeader" style={{ padding: "5px" }}>
         <Link to="/popcorntime">
           <img
             src="/webflix.png"
