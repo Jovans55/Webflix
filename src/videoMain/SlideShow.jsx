@@ -2,30 +2,31 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 const spanStyle = {
-  padding: "20px",
-  background: "#efefef",
-  color: "#000000",
+  padding: "15px",
+  margin: "15px",
+  background: "#399afb",
+  color: "white",
+  fontWeight: "bold",
 };
 
 const divStyle = {
   display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  alignItems: "flex-start",
   backgroundSize: "cover",
   height: "500px",
 };
 const slideImages = [
   {
     url: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    caption: "Slide 1",
+    caption: "🔥 NEW TO WEBFLIX! 🔥",
   },
   {
     url: "https://img.youtube.com/vi/p_5yt5IX38I/maxresdefault.jpg",
-    caption: "Slide 2",
+    caption: "😎 MOST POPULAR ON WEBFLIX! 😎",
   },
   {
     url: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    caption: "Slide 3",
+    caption: "😟 LEAVING SOON! 😟",
   },
 ];
 
