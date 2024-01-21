@@ -2,7 +2,7 @@ import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 const spanStyle = {
-  padding: "15px",
+  padding: "10px",
   margin: "15px",
   background: "#399afb",
   color: "white",
@@ -11,6 +11,8 @@ const spanStyle = {
 
 const divStyle = {
   display: "flex",
+  width: "100vw",
+  maxWidth: "1000px",
   alignItems: "flex-start",
   backgroundSize: "cover",
   height: "500px",
@@ -34,7 +36,7 @@ function Slideshow() {
   return (
     <div
       className="slide-container"
-      style={{ maxWidth: "1000px", height: "500px" }}
+      style={{ maxWidth: "1000px", width: "100vw", height: "500px" }}
     >
       <Slide>
         {slideImages.map((slideImage, index) => (
