@@ -1,5 +1,6 @@
 import { useState } from "react";
 import VideoMenu from "./Videomenu";
+import VideoCard from "./videoCard/VideoCard";
 import Slideshow from "./SlideShow";
 
 function VideoMain({ userData }) {
@@ -29,15 +30,13 @@ function VideoMain({ userData }) {
           >
             Popular
           </h1>
-          <section
-            style={{
-              overflowY: "hidden",
-              overflowX: "auto",
-              whiteSpace: "nowrap",
-              maxWidth: "1000px",
-            }}
-          >
-            <iframe
+          <section className="VideosSectionContainer">
+            <VideoCard
+              imgLink={"dQw4w9WgXcQ"}
+              videoTitle={"Never going to give you up"}
+            />
+            <VideoCard imgLink={"p_5yt5IX38I"} videoTitle={"Throat Signing"} />
+            {/* <iframe
               width="250"
               height="200"
               frameBorder="0"
@@ -72,7 +71,7 @@ function VideoMain({ userData }) {
               height="100%"
               src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
               alt="YouTube Thumbnail"
-            />
+            /> */}
           </section>
         </div>
       </section>
