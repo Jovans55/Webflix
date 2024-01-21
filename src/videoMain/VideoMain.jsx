@@ -50,6 +50,15 @@ function VideoMain({ userData }) {
               imgLink={"QrvV-R3y2xY"}
               videoTitle={"How To Center a Div"}
             />
+            <VideoCard
+              imgLink={"Q_iTGX9MZkM"}
+              videoTitle={"4 HOUR Family Compilation?!? 💀"}
+            />
+            <VideoCard
+              imgLink={"CnWGmWbBSsY"}
+              videoTitle={"Monkies Taking a Shower"}
+            />
+            <VideoCard imgLink={"cK-GILT2unE"} videoTitle={"Terminator 3"} />
           </section>
           <h1
             style={{ borderBottom: "5px solid #101012", paddingBottom: "10px" }}
@@ -68,6 +77,15 @@ function VideoMain({ userData }) {
             <VideoCard
               imgLink={"Q_iTGX9MZkM"}
               videoTitle={"4 HOUR Family Compilation?!? 💀"}
+            />
+            <VideoCard
+              imgLink={"AXhV9UBmFmM"}
+              videoTitle={"EPIC SNOW FAILS!"}
+            />
+            <VideoCard imgLink={"8Qc29mubbzk"} videoTitle={"Rizz Monkey"} />
+            <VideoCard
+              imgLink={"CnWGmWbBSsY"}
+              videoTitle={"Monkies Taking a Shower"}
             />
           </section>
           <h1
@@ -96,6 +114,11 @@ function VideoMain({ userData }) {
               imgLink={"ndkh8MQw9ZM"}
               videoTitle={"Dudes with Katanas"}
             />
+            <VideoCard
+              imgLink={"udUJuRIkk0I"}
+              videoTitle={"Conor McGregor Career Highlights"}
+            />
+            <VideoCard imgLink={"cK-GILT2unE"} videoTitle={"Terminator 3"} />
           </section>
           <h1
             style={{ borderBottom: "5px solid #101012", paddingBottom: "10px" }}
@@ -126,7 +149,11 @@ function VideoMain({ userData }) {
             />
             <VideoCard
               imgLink={"XAoOpOuc2Ms"}
-              videoTitle={"Learn to fly a plane in 5 minutes."}
+              videoTitle={"Learn To Fly a Plane In 5 Minutes."}
+            />
+            <VideoCard
+              imgLink={"m_SlH3Uwslc"}
+              videoTitle={"How Bees Choose Their Queen"}
             />
           </section>
         </div>

@@ -10,8 +10,8 @@ function VideoPlayer() {
           <img
             src="/webflix.png"
             alt="Webflix logo light blue"
-            width={"100px"}
-            height={"35px"}
+            width={"150px"}
+            height={"50px"}
             style={{ margin: "5px 0px 0px 0px" }}
           />
         </Link>
