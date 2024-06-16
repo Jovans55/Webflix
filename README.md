@@ -1,7 +1,5 @@
 # Webflix
 
-## THIS REPO AND CODE ARE UNDER THE SOLE OWNERSHIP OF JOVAN STOSIC AND NOT FOR USE BY ANY OTHER ENTITY. THIS IS ONLY FOR VIEWING AND NOT FOR ANY OTHER REASON.
-
 Hi,
 
 This project was just a small side project where I pushed myself to create a good-looking website using only regular CSS and to learn a new database, MongoDB. I thought a video streaming/subscription-based streaming service website would be the most fun to try and recreate/put my spin on, and I really enjoyed making this project.
