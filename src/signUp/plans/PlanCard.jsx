@@ -76,11 +76,11 @@ function PlanCard({ type, color, price, howLong, benefits, setPlan }) {
         <>
           <p style={{ marginTop: "5px" }}>Discount: ${total}.00 - $2000.00</p>
           <p style={{ marginTop: "0px" }}>
-            NEW Total Pre Pay Period: ${total - 2000}.00
+            NEW Total Per Pay Period: ${total - 2000}.00
           </p>
         </>
       ) : (
-        <p style={{ marginTop: "30px" }}>Total Pre Pay Period: ${total}.00</p>
+        <p style={{ marginTop: "30px" }}>Total Per Pay Period: ${total}.00</p>
       )}
       <p>What comes with?</p>
       <p style={{ margin: "0px" }}>{benefits}</p>
